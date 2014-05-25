@@ -26,10 +26,13 @@ combined.train[,2] <- factor(combined.train[,2],activity.names[,1],activity.name
 ## them into a single data frame called combined.test
 subj.test <- read.table("./test/subject_test.txt")
 colnames(subj.test) <- "subject.code"
+
 X.test <- read.table("./test/X_test.txt")
 colnames(X.test) <- feature.names[,2]
+
 Y.test <- read.table("./test/y_test.txt")
 colnames(Y.test) <- "activity"
+
 combined.test <- as.data.frame(cbind(subj.test, Y.test, X.test))
 combined.test[,2] <- factor(combined.test[,2],activity.names[,1],activity.names[,2])
 
