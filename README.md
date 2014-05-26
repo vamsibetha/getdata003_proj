@@ -27,16 +27,13 @@ The data is placed in 2 separate data sets - training and test data set. Also fo
 
 ### Process
 
-Note- 
-
-The R script assumes that it is present inside the "UCI HAR Dataset" folder along with the other files. Otherwise, set the working directory to this folder using setwd().
-
-The R script requires the reshape2 library of functions for performing the melt and dcast functions. The script automatically installs the library if not present already.
-
-
 * The training data set is combined with the subject, activity and feature values for all the training readings.
 * The test data set is similarly prepared.
 * Training and test data are combined row-wise to get the combined data set
 * The required variables are selected using the grep() function for "mean()" and "std()" values.
 * The data set obtained above is summarized for average values using melt and dcast based on subject and activity codes.
 * The final data set is written to a local .txt file in the working directory.
+
+Note- 
+* The R script assumes that it is present inside the "UCI HAR Dataset" folder along with the other files. Otherwise, set the working directory to this folder using setwd().
+* The R script requires the reshape2 library of functions for performing the melt and dcast functions. The script automatically installs the library if not present already.
